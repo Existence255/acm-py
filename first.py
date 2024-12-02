@@ -1,19 +1,17 @@
 #q1
 def q1(m,n):
     sum=0
-    for i in range(m-1,n):
+    for i in range(m,n+1):
         sum+=i
     return sum
 
     
 #q2
 def q2(a,b):
-    if a/b:
+    if a%b==0:
         return True
     else:
         return False
-
-    
 
 #q3
 
@@ -28,7 +26,7 @@ def q4(f):
     if f==0:
         return 1
     else:
-        return f*q3(f-1)
+        return f*q4(f-1)
 
     
 #q5
@@ -53,7 +51,8 @@ def main():
     b=int(input("Enter the breadth of rectangle:"))
     area,perimeter=q3(l,b)
     print("Area of rectangle is:",area)
-    print("Perimeter of rectangle is:",perimeter)
+    print("Perimeter of rectangle is:",perimeter) 
     f=int(input("Enter the number:"))
-    print("Factorial of",f,"is:",q3(f))
+    print("Factorial of",f,"is:",q4(f))
     q5()
+main()
